@@ -1,0 +1,30 @@
+# Project: Los operadores de apuntador
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = "Los\ operadores\ de\ apuntador.o" $(RES)
+LINKOBJ  = "Los operadores de apuntador.o" $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib"  
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = "Los operadores de apuntador.exe"
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before "Los operadores de apuntador.exe" all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "Los operadores de apuntador.exe" $(LIBS)
+
+"Los\ operadores\ de\ apuntador.o": Los\ operadores\ de\ apuntador.c
+	$(CC) -c "Los operadores de apuntador.c" -o "Los operadores de apuntador.o" $(CFLAGS)
